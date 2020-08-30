@@ -1,0 +1,15 @@
+Program to check whether a string/word/phrase is a PALINDROME or not 
+
+def palindrome(str):
+
+#First remove the spaces if its a phrase that you want to check for a palindrome"
+
+	str = str.replace(' ','')
+  
+ #Reverse the string using slicing method"
+	return str == str[::-1]
+
+>>> palindrome("nurses run")
+True
+>>> palindrome("i like banana")
+False
