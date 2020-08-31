@@ -1,0 +1,39 @@
+Program to check whether is string is a PANGRAM or not 
+
+>>> import string
+>>> def ispangram(str1, alphabet = string.ascii_lowercase):
+
+#Create a alphaset of all the alphabets, we are importing this from string
+	alphaset = set(alphabet)
+
+#Remove all the spaces using .replace()
+	str1 = str1.replace(' ','')
+
+#Convert to lower case 
+str1 = str1.lower()
+
+#Convert str1 to a set, set will have the all the alphabets in that string only once 
+	str1 = set(str1)
+#Compare str1 set to alphaset 
+	return str1 == alphaset
+
+
+##Prg
+
+>>> import string
+>>> def ispangram(str1, alphabet = string.ascii_lowercase):
+	alphaset = set(alphabet)
+	str1 = str1.replace(' ','')
+	str1 = str1.lower()
+	str1 = set(str1)
+	return str1 == alphaset
+
+>>> ispangram("the quick brown fox jumps over the lazy dog")
+True
+>>> ispangram("it is a beautiful day")
+False
+
+
+
+
+
